@@ -308,20 +308,155 @@ export default function Home() {
     </>
   );
 }
+import Head from "next/head";
+
 export default function Home() {
   return (
-    <div style={{fontFamily: 'Arial', padding: '40px', background:'#0b1f5b', color:'#fff'}}>
-      <h1>NEEV STUDIO</h1>
-      <p>Structured Retail Environments That Perform</p>
-      <button style={{
-        background:'#c9a64b',
-        border:'none',
-        padding:'10px 20px',
-        marginTop:'20px',
-        cursor:'pointer'
+    <>
+      <Head>
+        <title>Neev Studio | Retail Design Consultancy</title>
+        <meta name="description" content="Structured retail environments that perform." />
+        <link rel="icon" href="/favicon.png" />
+      </Head>
+
+      {/* WhatsApp Button */}
+      <a
+        href="https://wa.me/917525992434"
+        target="_blank"
+        rel="noreferrer"
+        style={{
+          position: "fixed",
+          bottom: 20,
+          right: 20,
+          background: "#25D366",
+          color: "#fff",
+          padding: "12px 18px",
+          borderRadius: "30px",
+          textDecoration: "none",
+          fontWeight: "bold",
+          zIndex: 999
+        }}
+      >
+        WhatsApp
+      </a>
+
+      {/* HEADER */}
+      <header style={{
+        background: "#0b1f5b",
+        padding: "20px 40px",
+        color: "#fff",
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center"
       }}>
-        Start Your Project
-      </button>
-    </div>
+        <img src="/logo.png" style={{ height: 45 }} />
+
+        <nav style={{ display: "flex", gap: 25 }}>
+          <a href="#" style={{ color: "#fff" }}>Home</a>
+          <a href="#services" style={{ color: "#fff" }}>Services</a>
+          <a href="#case" style={{ color: "#fff" }}>Case Studies</a>
+          <a href="#contact" style={{ color: "#fff" }}>Contact</a>
+        </nav>
+
+        <div style={{ fontSize: 14 }}>
+          contact@neevstudio.net<br />
+          +91 7525992434
+        </div>
+      </header>
+
+      {/* HERO */}
+      <section style={{
+        background: "#0b1f5b",
+        color: "#fff",
+        padding: "100px 40px"
+      }}>
+        <h1 style={{ fontSize: 42 }}>
+          Structured Retail Environments That Perform
+        </h1>
+
+        <p style={{ marginTop: 15 }}>
+          Systems • Space • Storytelling for High-Impact Store Design
+        </p>
+
+        <button style={{
+          marginTop: 25,
+          padding: "12px 24px",
+          background: "#c9a64b",
+          border: "none",
+          cursor: "pointer"
+        }}>
+          Start Your Project
+        </button>
+      </section>
+
+      {/* SERVICES */}
+      <section id="services" style={{ padding: 60 }}>
+        <h2>Services</h2>
+
+        <div style={{ display: "flex", gap: 20, marginTop: 30 }}>
+          <div>
+            <img src="/fixture-1.jpg" width="250" />
+            <h3>Retail Strategy</h3>
+          </div>
+
+          <div>
+            <img src="/store-hero.jpg" width="250" />
+            <h3>Store Design</h3>
+          </div>
+
+          <div>
+            <img src="/wall-1.png" width="250" />
+            <h3>Fixture Systems</h3>
+          </div>
+
+          <div>
+            <img src="/fixture-2.png" width="250" />
+            <h3>Visual Merchandising</h3>
+          </div>
+        </div>
+      </section>
+
+      {/* CASE STUDY */}
+      <section id="case" style={{ padding: 60, background: "#f5f5f5" }}>
+        <h2>Case Studies</h2>
+
+        <div style={{ display: "flex", gap: 20, marginTop: 30 }}>
+          <div>
+            <img src="/wall-2.jpeg" width="300" />
+            <h3>Modular Fixture System</h3>
+          </div>
+
+          <div>
+            <img src="/store-hero.jpg" width="300" />
+            <h3>Premium Retail Store</h3>
+          </div>
+
+          <div>
+            <img src="/fixture-3.png" width="300" />
+            <h3>VM Strategy</h3>
+          </div>
+        </div>
+      </section>
+
+      {/* CONTACT */}
+      <section id="contact" style={{ padding: 60 }}>
+        <h2>Contact</h2>
+
+        <p>Email: contact@neevstudio.net</p>
+        <p>Phone: +91 7525992434</p>
+      </section>
+
+      {/* FOOTER */}
+      <footer style={{
+        background: "#0b1f5b",
+        color: "#fff",
+        padding: 40,
+        textAlign: "center"
+      }}>
+        <p>All disputes subject to Kanpur jurisdiction.</p>
+        <p>Neev Studio reserves all design rights.</p>
+        <p>© 2026 Neev Studio</p>
+      </footer>
+    </>
   );
 }
