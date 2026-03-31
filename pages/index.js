@@ -308,3 +308,20 @@ export default function Home() {
     </>
   );
 }
+export default function Home() {
+  return (
+    <div style={{fontFamily: 'Arial', padding: '40px', background:'#0b1f5b', color:'#fff'}}>
+      <h1>NEEV STUDIO</h1>
+      <p>Structured Retail Environments That Perform</p>
+      <button style={{
+        background:'#c9a64b',
+        border:'none',
+        padding:'10px 20px',
+        marginTop:'20px',
+        cursor:'pointer'
+      }}>
+        Start Your Project
+      </button>
+    </div>
+  );
+}
