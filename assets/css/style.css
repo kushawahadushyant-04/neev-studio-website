@@ -1,65 +1,91 @@
-.header {
+:root {
+  --blue: #3B82F6;
+  --gold: #FBBF24;
+  --ink: #111827;
+  --muted: #6B7280;
+  --bg: #F9FAFB;
+  --card: #FFFFFF;
+  --line: #E5E7EB;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --radius: 8px;
+  --container: 1200px;
+}
+
+.site-header {
   position: sticky;
   top: 0;
-  background-color: rgba(255, 215, 0, 0.9);
-  transition: background-color 0.3s ease;
-  box-shadow: 0 4px 2px -2px gray;
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.3s ease;
 }
 
-.header:hover {
-  background-color: rgba(255, 215, 0, 1);
+.site-header:hover {
+  box-shadow: 0 4px 6px var(--shadow);
 }
 
-section {
-  padding: 40px 20px;
-  margin: 0;
-  line-height: 1.6;
+.nav a {
+  transition: transform 0.3s ease;
 }
 
-h1, h2, h3 {
-  font-family: 'Serif';
-  color: #003366;
-  margin-bottom: 20px;
-  transition: color 0.5s ease;
+.nav a:hover {
+  transform: translateY(-2px);
 }
 
-h1:hover, h2:hover, h3:hover {
-  color: #ffcc00;
+.hero {
+  padding: 80px 0;
+  animation: fadeInUp 0.5s ease;
 }
 
-.button {
-  background-color: #003366;
-  color: #ffcc00;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+.hero-media {
+  transition: transform 0.3s ease;
 }
 
-.button:hover {
-  background-color: #ffcc00;
-  transform: translateY(-3px);
+.hero-media:hover {
+  transform: scale(1.05);
 }
 
-.scroll-effect {
-  transition: transform 0.5s ease, opacity 0.5s ease;
-  opacity: 0; 
-  transform: translateY(20px);
+.value-strip {
+  padding: 80px 0;
+  animation: fadeInUp 0.7s ease;
 }
 
-.scroll-effect.visible {
-  opacity: 1;
-  transform: translateY(0);
+.tile {
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
 }
 
-/* Add animation for scroll effects */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+.tile:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px var(--shadow);
 }
 
-.fade-in {
-  animation: fadeIn 1s ease-in;
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-/* Implement transitions and effects in other elements as needed */
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px var(--shadow);
+}
+
+.footer {
+  padding: 80px 0;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    max-width: calc(100% - 40px);
+  }
+}
+
+@media (max-width: 720px) {
+  .hero {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .tile {
+    padding: 10px;
+  }
+}
