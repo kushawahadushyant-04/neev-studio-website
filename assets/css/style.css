@@ -495,8 +495,8 @@ img {
   gap: 24px;
 }
 
-.footer img  {
-  height: 50px;
+.footer img {
+  height: 100px;
   width: auto;
   object-fit: contain;
 }
@@ -657,8 +657,12 @@ img {
 
 @media (max-width: 480px) {
   .topbar {
-    height: 70px;
-  }
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
   
   .hero-copy h1 {
     font-size: 28px;
