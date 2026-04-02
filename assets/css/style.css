@@ -95,10 +95,22 @@ img {
   gap: 24px;
 }
 
+.brand img .brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: var(--transition);
+}
+
+.brand:hover {
+  opacity: 0.9;
+}
+
 .brand img {
-  height: 44px;
+  height: 60px;
   width: auto;
   object-fit: contain;
+  max-width: 280px;
 }
 
 /* Navigation */
@@ -484,9 +496,10 @@ img {
   gap: 24px;
 }
 
-.footer img {
-  height: 38px;
+.footer img  {
+  height: 50px;
   width: auto;
+  object-fit: contain;
 }
 
 .footer-nav {
